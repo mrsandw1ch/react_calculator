@@ -1,0 +1,128 @@
+.App {
+    #calculator {
+        margin: auto;
+        margin-top: 50vh;
+        transform: translateY(-50%);
+        width: 34rem;
+        height: 50.8rem;
+        background: white;
+        border-radius: 4.4rem;
+        padding: 0.4rem;
+        
+        #display {
+            width: 100%;
+            height: 8rem;
+            padding: 1rem 3.1rem 0.3rem;
+            background: #6C6C6C;
+            border-radius: 4rem;
+            text-align: right;
+
+            * {
+                overflow: scroll;
+            }
+
+            #calculation {
+                height: 2.9rem;
+                padding-bottom: 0.7rem;
+                color: #D3FA13;
+                font-size: 1.8rem;
+            }
+
+            #input-output {
+                height: 3.8rem;
+                padding-bottom: 0.7rem;
+                color: white; 
+                font-size: 2.6rem;
+            }
+        }
+
+        #keyboard {
+            width: 100%;
+            height: 41.6rem;
+            margin-top: 0.4rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 0.4rem;
+
+            .keyboard-btn {
+                background: #F5F5F5;
+                color: #6C6C6C;
+                font-size: 1.8rem;
+                border-radius: 4rem;
+                border: none;
+                transition: background-color 300ms;
+            }
+
+            .keyboard-btn:hover {
+                cursor: pointer;
+                background: #E6E6E6;
+            }
+
+            #clear {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+                background: #E6E6E6;
+            }
+
+            #clear:hover {
+                background: #F5F5F5;
+            }
+
+            #divide {
+                grid-column: 3;
+                grid-row: 1;
+            }
+
+            #multiply {
+                grid-column: 4;
+                grid-row: 1;
+            }
+
+            #subtract {
+                grid-column: 4;
+                grid-row: 2
+            }
+
+            #add {
+                grid-column: 4;
+                grid-row: 3;
+            }
+
+            #equals {
+                grid-column: 4;
+                grid-row: 4 / span 2;
+                background: #D3FA13;
+            }
+
+            #equals:hover {
+                background-color: #c0e213;
+            }
+
+            #digits {
+                grid-column: 1 / span 3;
+                grid-row: 2 / span 4;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                gap: 0.4rem;
+
+                #zero {
+                    grid-column: 1 / span 2;
+                }
+
+                #one, #two, #three {
+                    grid-row: 3
+                }
+
+                #four, #five, #six {
+                    grid-row: 2
+                }
+
+                #seven, #eight, #nine {
+                    grid-row: 1
+                }
+            }
+        }
+    }
+}
