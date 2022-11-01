@@ -2,9 +2,9 @@
 
 ## Formula logic calculator
 
-Uses React
-
 *Learning React functional components, useState, learning SCSS...*
+
+Uses React
 
 To install the application, run `npm install` in the project directory.
 
