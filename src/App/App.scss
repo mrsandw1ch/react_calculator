@@ -1,8 +1,11 @@
 .App {
+    width: 100%;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+
     #calculator {
         margin: auto;
-        margin-top: 50vh;
-        transform: translateY(-50%);
         width: 34rem;
         height: 50.8rem;
         background: white;
@@ -125,4 +128,9 @@
             }
         }
     }
+    #signature {
+        margin-top: 1rem;
+        color: #6C6C6C;
+        font-size: 1.2rem;
+      }
 }
