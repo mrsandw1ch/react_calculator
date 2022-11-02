@@ -21,7 +21,27 @@
             text-align: right;
 
             * {
-                overflow: scroll;
+                overflow-x: auto;
+                overflow-y: hidden;
+
+                &::-webkit-scrollbar {
+                    height: 6px;
+                    border-radius: 3px;
+                    background-color: #535353;
+
+                    &-thumb {
+                        background-color: #8d8d8d;
+                        border-radius: 3px;
+
+                        &:hover {
+                            background-color: #cfcfcf;
+                        }
+
+                        &:active {
+                            background-color: #D3FA13;
+                        }
+                    }
+                }
             }
 
             #calculation {
@@ -55,21 +75,21 @@
                 border-radius: 4rem;
                 border: none;
                 transition: background-color 300ms;
-            }
 
-            .keyboard-btn:hover {
-                cursor: pointer;
-                background: #E6E6E6;
+                &:hover {
+                    cursor: pointer;
+                    background: #E6E6E6;
+                }
             }
 
             #clear {
                 grid-column: 1 / span 2;
                 grid-row: 1;
                 background: #E6E6E6;
-            }
 
-            #clear:hover {
-                background: #F5F5F5;
+                &:hover {
+                    background: #F5F5F5;
+                }
             }
 
             #divide {
@@ -96,10 +116,10 @@
                 grid-column: 4;
                 grid-row: 4 / span 2;
                 background: #D3FA13;
-            }
 
-            #equals:hover {
-                background-color: #c0e213;
+                &:hover {
+                    background-color: #c0e213;
+                }
             }
 
             #digits {
