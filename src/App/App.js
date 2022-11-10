@@ -245,7 +245,6 @@ function App() {
           </div>
         </div>
       </div>
-      <p id="signature">by mrsandw1ch</p>
     </div>
   );
 }
