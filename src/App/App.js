@@ -60,6 +60,21 @@ function App() {
     setOperation('')
   }
 
+
+  function clearClickHandle() {
+    if (formula.length === 0 || digits === '0' || result !== '') {
+      setResult('')
+      setFormula([])
+      setOperation('')
+    }
+
+    if (operation) {
+      setFormula(formula.concat(operation))
+      setOperation('')
+    }
+    setDigits('0')
+  }
+  
   
   function calculate(formula) {
 
@@ -121,13 +136,8 @@ function App() {
           <button
             className='keyboard-btn'
             id='clear'
-            onClick={() => {
-              setOperation('')
-              setResult('')
-              setFormula([])
-              setDigits('0')
-              }}>
-            AC
+            onClick={() => {clearClickHandle()}}>
+            {(formula.length === 0 || digits === '0' || result !== '')  ? <>AC</> : <>C</>}
           </button>
 
           <button
@@ -245,6 +255,10 @@ function App() {
           </div>
         </div>
       </div>
+      <footer>
+        <p>	&#169; 2022 coded by <a href="https://github.com/mrsandw1ch" rel='noreferrer' target='_blank'>mrsandw1ch</a></p>
+        <p>designed by <a href="https://www.behance.net/DariaBorisovna" rel='noreferrer' target='_blank'>lil_soup</a></p>
+      </footer>
     </div>
   );
 }
